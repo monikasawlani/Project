@@ -1,0 +1,28 @@
+
+<html>
+
+<head>
+
+<style>
+form{
+border:1px solid;
+width:20em;
+height:15em;
+}
+</style>
+
+</head>
+
+ <form name="myForm" ng-submit="submit()">
+    <h1>Login Page
+        </h1>
+&nbsp;&nbsp;&nbsp;<input type="text" name="user" size="30" height="30" placeholder="username" ng-model="user"><br/>
+ <span ng-show="myForm.user.$touched" style="color:red">The name is required</span>   <br/>
+&nbsp;&nbsp;&nbsp;<input type="password" name="password" size="30" height="40"  ng-minlength="8" placeholder="password" ng-model="password">
+   <br/></br>
+   <span ng-show="myForm.password.$touched" style="color:red">The password is required</span>
+   &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" style="font-size:14pt;color:white;background-color:green; height:30px; width:100px"value="Submit"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" style="font-size:14pt;color:white;background-color:green; height:30px; width:100px" value="Reset" ng-click="reset()"/>
+   </form>
+   </body>
+   </html>
